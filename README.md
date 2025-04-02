@@ -4,8 +4,8 @@
 - [Overview](#overview)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Configuration](#configuration)
-- [Contributing](#contributing)
+- [Configuration & run](#configuration)
+- [Dataset](#contributing)
 - [License](#license)
 
 ## Overview
@@ -128,7 +128,61 @@
 - For test: ```python test.py --checkpoint outputs/best_model.pth --dataset ./data/lmo --obj_id 1 --output_dir test_results```
 
 
-## Contributing
+## Dataset
+- **Note**: In this code just load object_id = 1 need to modify if you want need more data
+- Download dataset in here: https://bop.felk.cvut.cz/datasets/
+```
+├── camera.json
+├── dataset_info.md
+├── lmo_base.zip
+├── lmo_models.zip
+├── lmo_test_all.zip
+├── lmo_test_bop19
+│   └── test
+│       └── 000002
+├── lmo_test_bop19.zip
+├── lmo_train.zip
+├── models
+│   ├── models_info.json
+│   ├── obj_000001.ply
+│   ├── obj_000005.ply
+│   ├── obj_000006.ply
+│   ├── obj_000008.ply
+│   ├── obj_000009.ply
+│   ├── obj_000010.ply
+│   ├── obj_000011.ply
+│   └── obj_000012.ply
+├── models_eval
+│   ├── models_info.json
+│   ├── obj_000001.ply
+│   ├── obj_000005.ply
+│   ├── obj_000006.ply
+│   ├── obj_000008.ply
+│   ├── obj_000009.ply
+│   ├── obj_000010.ply
+│   ├── obj_000011.ply
+│   └── obj_000012.ply
+├── README.md
+├── test
+│   └── 000002
+│       ├── depth
+│       ├── mask
+│       ├── mask_visib
+│       ├── rgb
+│       ├── scene_camera.json
+│       ├── scene_gt_info.json
+│       └── scene_gt.json
+├── test_targets_bop19.json
+└── train
+    ├── 000001
+    │   ├── depth
+    │   ├── mask
+    │   ├── mask_visib
+    │   ├── rgb
+    │   ├── scene_camera.json
+    │   ├── scene_gt_info.json
+    │   └── scene_gt.json
+```
 
 
 ## License
