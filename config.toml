@@ -1,0 +1,39 @@
+#[cma]
+# Feature dimensions for MobileNetV2 layers
+#num_ch_enc = [16, 24, 32, 96, 1280]  # MobileNetV2 feature dimensions
+#scales = [0, 1, 2, 3]
+#cma_layers = [2, 1]  # Layers where Cross-Modal Attention is applied
+#num_head = 4
+#head_ratio = 2
+#sgt = 0.1
+
+#[decoder]
+# Decoder channel dimensions
+#num_ch_dec = [16, 32, 64, 128, 256]
+
+#[vector_decoder]
+#in_channels_list = [16, 32, 64, 128, 256]
+
+[training]
+batch_size = 1
+learning_rate = 0.001
+weight_decay = 0.0001
+supervised_epochs = 1
+self_supervised_epochs = 1
+use_self_supervised = true
+save_frequency = 10
+gradient_clip = 5.0
+scheduler_step_size = 20
+scheduler_gamma = 0.5
+
+[lambdas]
+lambda_pos = 1.0
+lambda_keypoints = 1.0
+lambda_vf = 0.5
+lambda_sem = 0.5
+lambda_depth = 0.5
+
+[data]
+root_path = "./"
+image_height = 480
+image_width = 640
